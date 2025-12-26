@@ -5,7 +5,6 @@
 // @description  shows all your petpets in a grid with pictures to easily select which one to zap with the petpet lab ray! remember to visit your home page to update your petpet list!
 // @author       gurase, inspired by toto's Turmac script
 // @match        https://www.neopets.com/petpetlab.phtml
-// @match        https://www.neopets.com/home/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=neopets.com
 // ==/UserScript==
 
