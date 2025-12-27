@@ -48,7 +48,7 @@
         $(this).css("border", "2px solid blue");    // Add border to clicked image
 
         var petName = $(this).attr("title");
-        targetSelect.val($(this).attr("title")).change(); // Set the dropdown value and trigger change event
+        targetSelect.val(petName).change(); // Set the dropdown value and trigger change event
         $("#PPL" + petName).addClass("ppl-hidden"); // Hide the selected petpet from OG page code
     });
 })();
