@@ -24,9 +24,9 @@
             console.log("succesful query")
             $(data).find(".hp-carousel-pet").each(function() { //find petpet and owner data
                 let petpetImg = $(this).attr("data-petpetimg");
-                let petpetName = $(this).attr("data-petpet");
+                let ownImg = $(this).attr("data-petimage");
                 let ownName = $(this).attr("data-name");
-                pets.push({petpetimg: petpetImg, petpetName: petpetName, ownName: ownName});
+                pets.push({petpetimg: petpetImg, ownImg: ownImg, ownName: ownName});
             });
 
             // Create a container for the petpet images
@@ -54,12 +54,9 @@
                 $(this).css("border", "2px solid blue");    // Add border to clicked image
 
                 var petName = $(this).attr("title");
+                $("#PPL" + petName).children("img").attr("src", pets.find(p => p.ownName === petName).ownImg).attr("width", "150px"); // Show pet image
                 targetSelect.val($(this).attr("title")).change(); // Set the dropdown value and trigger change event
-                $("#PPL" + petName).addClass("ppl-hidden"); // Hide the selected petpet from OG page code
             });
         }
     });
 })();
-
-
-
