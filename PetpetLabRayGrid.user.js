@@ -21,12 +21,10 @@
         url: "https://www.neopets.com/home/index.phtml", // Shoutouts to Luxittarius
         method: "GET",
         success: function(data) {
-            console.log("succesful query")
             $(data).find(".hp-carousel-pet").each(function() { //find petpet and owner data
                 let petpetImg = $(this).attr("data-petpetimg");
-                let ownImg = $(this).attr("data-petimage");
                 let ownName = $(this).attr("data-name");
-                pets.push({petpetimg: petpetImg, ownImg: ownImg, ownName: ownName});
+                pets.push({petpetimg: petpetImg, ownName: ownName});
             });
 
             // Create a container for the petpet images
@@ -40,7 +38,7 @@
             // Append container after dropdown
             targetSelect.after(gridContainer);
 
-            // Create as many buttons as there are pets, use name and image attributes
+            // Create as many buttons as there are pets, use name and image attributes. Hide unnamed petpets that can't be zapped
             for (let i = 0; i < pets.length; i++){
                 if(typeof pets[i].petpetimg !== 'undefined' && targetSelect.children('option[value="' + pets[i].ownName + '"]').length > 0){
                     gridContainer.append('<img id="petpet-' + i + '" title="' + pets[i].ownName+ '" src="' + pets[i].petpetimg + '" style="margin-left: 10px;"></a>')
@@ -54,8 +52,8 @@
                 $(this).css("border", "2px solid blue");    // Add border to clicked image
 
                 var petName = $(this).attr("title");
-                $("#PPL" + petName).children("img").attr("src", pets.find(p => p.ownName === petName).ownImg).attr("width", "150px"); // Show pet image
                 targetSelect.val($(this).attr("title")).change(); // Set the dropdown value and trigger change event
+                $("#PPL" + petName).addClass("ppl-hidden"); // Hide the selected petpet from OG page code
             });
         }
     });
