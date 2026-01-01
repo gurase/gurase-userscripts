@@ -12,11 +12,14 @@
     'use strict';
 
     var pets = {};
+    $("body").empty();
+    $("body").removeAttr("background");
+
     $.ajax({
         url: "https://www.neopets.com/home/index.phtml", // Shoutouts to Luxittarius
         method: "GET",
         success: function(data) {
-            $(data).find(".hp-carousel-pet").each(function() { //find petpet and owner data
+            $(data).find(".hp-carousel-pet").each(function() { //find pet data
                 let petImg = $(this).attr("data-petimage");
                 let petName = $(this).attr("data-name");
                 pets[petName] = petImg;
@@ -36,7 +39,7 @@
             // Add pet images to the grid
             for (var petName in pets) {
                 if(typeof pets[petName] !== 'undefined'){
-                    gridContainer.append('<a href="https://www.neopets.com/customise/?view=' + encodeURIComponent(petName) + '"><img id="pet-' + petName + '" title="' + petName + '" src="' + pets[petName] + '" style="margin-left: 10px;"></a>')
+                    gridContainer.append('<a href="https://www.neopets.com/customise/?view=' + encodeURIComponent(petName) + '"><img id="pet-' + petName + '" title="' + petName + '" src="' + pets[petName] + '" style="margin-left: 10px; width: 100px;"></a>')
                 }
             }
         }
