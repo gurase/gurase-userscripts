@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Petpet Lab Ray Grid
 // @namespace    http://tampermonkey.net/
-// @version      2025-12-27
+// @version      2026-01-02
 // @description  shows all your petpets in a grid with pictures to easily select which one to zap with the petpet lab ray!
 // @author       gurase, inspired by toto's Turmac script
 // @match        https://www.neopets.com/petpetlab.phtml
