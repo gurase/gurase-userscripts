@@ -39,8 +39,9 @@
             // Add pet images to the grid
             for (var petName in pets) {
                 if(typeof pets[petName] !== 'undefined'){
-                    gridContainer.append('<div style="text-align: center;"><img id="pet-' + petName + '" title="' + petName + '" src="' + pets[petName] +
-                        '" style="margin-left: 10px; width: 150px;"><br/>' +
+                    gridContainer.append('<div style="text-align: center;"><a href="https://www.neopets.com/petlookup.phtml?pet=' + encodeURIComponent(petName) +
+                        '" target="new"><img id="pet-' + petName + '" title="' + petName + '" src="' + pets[petName] +
+                        '" style="margin-left: 10px; width: 150px;"></a><br/>' +
                         '<a href="https://www.neopets.com/customise/?view=' + encodeURIComponent(petName) +
                         '" target="new">Customise</a><br/>' +
                         '<a href="https://www.neopets.com/stylingchamber/?view=' + encodeURIComponent(petName) +
