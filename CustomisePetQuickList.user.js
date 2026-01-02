@@ -28,7 +28,7 @@
             // Create a container for the pet images
             var gridContainer = $("<div></div>").css({
                 "display": "grid",
-                "grid-template-columns": "repeat(auto-fit, minmax(100px, 1fr))",
+                "grid-template-columns": "repeat(auto-fit, minmax(150px, 1fr))",
                 "gap": "10px",
                 "margin-top": "20px",
             });
@@ -39,7 +39,12 @@
             // Add pet images to the grid
             for (var petName in pets) {
                 if(typeof pets[petName] !== 'undefined'){
-                    gridContainer.append('<a href="https://www.neopets.com/customise/?view=' + encodeURIComponent(petName) + '"><img id="pet-' + petName + '" title="' + petName + '" src="' + pets[petName] + '" style="margin-left: 10px; width: 100px;"></a>')
+                    gridContainer.append('<div style="text-align: center;"><img id="pet-' + petName + '" title="' + petName + '" src="' + pets[petName] +
+                        '" style="margin-left: 10px; width: 150px;"><br/>' +
+                        '<a href="https://www.neopets.com/customise/?view=' + encodeURIComponent(petName) +
+                        '" target="new">Customise</a><br/>' +
+                        '<a href="https://www.neopets.com/stylingchamber/?view=' + encodeURIComponent(petName) +
+                        '" target="new">Styling Chamber</a></div>');
                 }
             }
         }
