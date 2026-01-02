@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Petpet Lab Ray Grid
 // @namespace    http://tampermonkey.net/
-// @version      2025-01-02
+// @version      2025-12-27
 // @description  shows all your petpets in a grid with pictures to easily select which one to zap with the petpet lab ray!
 // @author       gurase, inspired by toto's Turmac script
 // @match        https://www.neopets.com/petpetlab.phtml
@@ -38,7 +38,7 @@
     // Add petpet images to the grid
     for (var petName in petpets) {
         if(typeof petpets[petName] !== 'undefined' && targetSelect.children('option[value="' + petName + '"]').length > 0){
-            gridContainer.append('<div id="petpet-' + petName + '"><img title="' + petName + '" src="' + petpets[petName] + '" style="margin-left: 10px;"><br/>' +
+            gridContainer.append('<div id="petpet-' + petName + '" title="' + petName + '"><img src="' + petpets[petName] + '" style="margin-left: 10px;"><br/>' +
                 petName + '</div>');
         }
     }
