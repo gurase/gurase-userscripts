@@ -29,6 +29,7 @@
         "grid-template-columns": "repeat(auto-fit, minmax(100px, 1fr))",
         "gap": "10px",
         "margin-top": "20px",
+        "font-size": "11pt"
     });
 
     // Append container after dropdown
@@ -37,14 +38,15 @@
     // Add petpet images to the grid
     for (var petName in petpets) {
         if(typeof petpets[petName] !== 'undefined' && targetSelect.children('option[value="' + petName + '"]').length > 0){
-            gridContainer.append('<img id="petpet-' + petName + '" title="' + petName + '" src="' + petpets[petName] + '" style="margin-left: 10px;"></a>')
+            gridContainer.append('<div id="petpet-' + petName + '"><img title="' + petName + '" src="' + petpets[petName] + '" style="margin-left: 10px;"><br/>' +
+                petName + '</div>');
         }
     }
 
     // Add event listener to select the chosen petpet
-    $("img[id^='petpet-']").on("click", function() {
+    $("div[id^='petpet-']").on("click", function() {
         //console.log("clicked on " + $(this).attr("title"));
-        $("img[id^='petpet-']").css("border", "none");  // Remove border from all images
+        $("div[id^='petpet-']").css("border", "none");  // Remove border from all images
         $(this).css("border", "2px solid blue");    // Add border to clicked image
 
         var petName = $(this).attr("title");
