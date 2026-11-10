@@ -14,7 +14,6 @@
 
 (function() {
     const taskLinks = {
-        "Check out Popular NC Items": "https://ncmall.neopets.com/mall/search.phtml?type=popular_items&cat=54&page=1&limit=24f",
         "Claim a Recycled Item": "https://www.neopets.com/donations.phtml",
         "Collect Bank Interest": "https://www.neopets.com/bank.phtml",
         "Customise your Neopet": "https://www.neopets.com/customise/",
@@ -37,6 +36,7 @@
         "Spin the Wheel of Knowledge": "https://www.neopets.com/medieval/knowledge.phtml",
         "Spin the Wheel of Mediocrity": "https://www.neopets.com/prehistoric/mediocrity.phtml",
         "Spin the Wheel of Misfortune": "https://www.neopets.com/halloween/wheel/index.phtml",
+        "View Popular NC Items": "https://ncmall.neopets.com/mall/search.phtml?type=popular_items&cat=54&page=1&limit=24f",
         "Visit NC Mall": "https://ncmall.neopets.com/mall/shop.phtml",
         "Vote in Customisation Spotlight": "https://www.neopets.com/spotlights/custompet/?tab=vote"
     };
