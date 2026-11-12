@@ -17,7 +17,7 @@
         "Claim a Recycled Item": "https://www.neopets.com/donations.phtml",
         "Collect Bank Interest": "https://www.neopets.com/bank.phtml",
         "Customise your Neopet": "https://www.neopets.com/customise/",
-        "Deposit in the Bank": "https://www.neopets.com/bank.phtml",
+        "Deposit NP in the Bank": "https://www.neopets.com/bank.phtml",
         "Discard an Item": "https://www.neopets.com/inventory.phtml",
         "Donate an Item": "https://www.neopets.com/inventory.phtml",
         "Feed your Neopet": "https://www.neopets.com/safetydeposit.phtml",
