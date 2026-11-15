@@ -16,6 +16,7 @@
     const taskLinks = {
         "Claim a Recycled Item": "https://www.neopets.com/donations.phtml",
         "Collect Bank Interest": "https://www.neopets.com/bank.phtml",
+        "Collect from the Giant Omelette": "https://www.neopets.com/prehistoric/omelette.phtml",
         "Customise your Neopet": "https://www.neopets.com/customise/",
         "Deposit NP in the Bank": "https://www.neopets.com/bank.phtml",
         "Discard an Item": "https://www.neopets.com/inventory.phtml",
@@ -23,7 +24,6 @@
         "Feed your Neopet": "https://www.neopets.com/safetydeposit.phtml",
         "Fight in the Battledome": "https://www.neopets.com/dome/",
         "Fish at Ye Olde Fishing Vortex": "https://www.neopets.com/water/fishing.phtml",
-        "Grab an Omelette": "https://www.neopets.com/prehistoric/omelette.phtml",
         "Groom your Neopet": "https://www.neopets.com/safetydeposit.phtml",
         "Play a game": "https://www.neopets.com/games/game.phtml?game_id=366",
         "Play Grumpy Old King": "https://www.neopets.com/medieval/grumpyking.phtml",
